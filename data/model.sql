@@ -1,5 +1,5 @@
 create table Users (
-    id integer not null
+    id integer primary key  not null
     username varchar(255) not null
     password varchar(255) not null
     logged_in boolean not null
@@ -7,7 +7,7 @@ create table Users (
 
 
 create table flight (
-    id integer not null
+    id integer primary key not null
     destination varchar(255) not null
     price integer not null
     departure_time date not null
@@ -19,7 +19,7 @@ create table flight (
 
 
 create table bookings (
-    id integer not null
+    id integer primary key  not null
     user_id foreign key Users.id
     flight_id foreign key flight.id
     booked boolean not null
